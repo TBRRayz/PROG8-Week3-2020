@@ -34,9 +34,13 @@ class Ball extends HTMLElement{
         this.maxHeight  = window.innerHeight - this.clientHeight
     }
 
-    abstract update() : void
+    public update() : void {
+        this.ballBehavior.performUpdate(this);
+    }
 
     public draw() {
         this.style.transform = "translate("+this.x+"px, "+this.y+"px)"
     }
 }
+
+window.customElements.define("ball-component", Ball as any);
