@@ -1,14 +1,14 @@
 class Main {
 
     private balls : Ball[] = []
-    private basketBall : BasketBall
+    private basketBall : Ball;
 
     constructor() {
         
-        this.balls.push(new EarthBall(0, window.innerWidth/2))
-        this.balls.push(new MoonBall(window.innerWidth/2, window.innerWidth))
+        this.balls.push(new Ball(0, window.innerWidth/2, new Bouncing()))
+        this.balls.push(new Ball(window.innerWidth/2, window.innerWidth, new Space()))
 
-        this.basketBall = new BasketBall(0, window.innerWidth)
+        this.basketBall = new Ball(0, window.innerWidth, new Bouncing);
         this.gameLoop()
     }
 
