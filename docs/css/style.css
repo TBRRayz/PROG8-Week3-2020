@@ -12,7 +12,7 @@ ball-component {
     width: 100px; height: 100px;
     position: absolute;
 }
-basketball-component {
+.basketball-component {
     background-image: url("../images/basketball.png");
     width: 100px; height: 100px;
     position: absolute;
