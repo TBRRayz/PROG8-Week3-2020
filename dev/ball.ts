@@ -12,15 +12,21 @@ class Ball extends HTMLElement{
     public maxHeight   : number = 0
 
     private ballBehavior : BallBehavior;
+    public soort : string;
 
     public setBehavior(behavior: BallBehavior) {
         this.ballBehavior = behavior;
     }
     
-    constructor(minWidth : number, maxWidth : number, behavior : BallBehavior) {
+    constructor(minWidth : number, maxWidth : number, behavior : BallBehavior, soort: string) {
         super()
 
         this.ballBehavior = behavior;
+        this.soort = soort;
+
+        if (this.soort == 'basketball') {
+            this.classList.add("basketball-component");
+        }
 
         let content = document.getElementsByTagName("content")[0]
         content.appendChild(this)
