@@ -17,11 +17,12 @@ class Main {
             ball.update()
         }
 
+        this.basketBall.update();
         if(this.basketBall.x > window.innerWidth / 2) {
-            this.basketBall.update();
+            this.basketBall.setBehavior(new Space());
         } 
         else {
-            this.basketBall.update();
+            this.basketBall.setBehavior(new Bouncing());
         }
 
         requestAnimationFrame(() => this.gameLoop())
