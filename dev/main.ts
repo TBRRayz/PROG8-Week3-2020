@@ -17,11 +17,11 @@ class Main {
             ball.update()
         }
 
-        if(this.basketBall.X > window.innerWidth / 2) {
-            this.basketBall.updateMoon();
+        if(this.basketBall.x > window.innerWidth / 2) {
+            this.basketBall.update();
         } 
         else {
-            this.basketBall.updateEarth();
+            this.basketBall.update();
         }
 
         requestAnimationFrame(() => this.gameLoop())
