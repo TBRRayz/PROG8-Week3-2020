@@ -5,10 +5,10 @@ class Main {
 
     constructor() {
         
-        this.balls.push(new Ball(0, window.innerWidth/2, new Bouncing()))
-        this.balls.push(new Ball(window.innerWidth/2, window.innerWidth, new Space()))
+        this.balls.push(new Ball(0, window.innerWidth/2, new Bouncing(), 'ball'))
+        this.balls.push(new Ball(window.innerWidth/2, window.innerWidth, new Space(), 'ball'))
 
-        this.basketBall = new Ball(0, window.innerWidth, new Bouncing);
+        this.basketBall = new Ball(0, window.innerWidth, new Bouncing(), 'basketball');
         this.gameLoop()
     }
 
