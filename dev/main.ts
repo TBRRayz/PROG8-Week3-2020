@@ -17,7 +17,12 @@ class Main {
             ball.update()
         }
 
-        this.basketBall.updateMoon()
+        if(this.basketBall.X > window.innerWidth / 2) {
+            this.basketBall.updateMoon();
+        } 
+        else {
+            this.basketBall.updateEarth();
+        }
 
         requestAnimationFrame(() => this.gameLoop())
     }
