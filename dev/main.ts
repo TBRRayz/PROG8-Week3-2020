@@ -17,7 +17,7 @@ class Main {
             ball.update()
         }
 
-        this.basketBall.update()
+        this.basketBall.updateMoon()
 
         requestAnimationFrame(() => this.gameLoop())
     }
